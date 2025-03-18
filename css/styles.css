@@ -371,6 +371,27 @@ main p {
   z-index: 0;
 }
 
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.testimonials div {
+  padding: 7px;
+}
+.testimonials div img {
+  width: 100%;
+  height: auto;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  transition: transform 1s;
+}
+.testimonials div img:hover {
+  transform: rotate(10deg);
+}
+.testimonials div p {
+  text-align: center;
+}
+
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   background-color: #1d295f;
@@ -494,10 +515,25 @@ footer a {
   #theNav li:hover ul {
     left: auto;
   }
+  .testimonials div {
+    display: grid;
+    grid-template-columns: 140px auto;
+    -moz-column-gap: 4px;
+         column-gap: 4px;
+    padding: 10px;
+  }
+  .testimonials div p {
+    text-align: left;
+  }
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {
     max-width: 960px;
     margin: auto;
+  }
+  .testimonials div {
+    grid-template-columns: 200px auto;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
   }
 }

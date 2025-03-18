@@ -2,3 +2,12 @@ header, nav, main {
     max-width: 960px;
     margin: auto;
 }
+
+// testimonials
+
+.testimonials {
+    div {
+        grid-template-columns: 200px auto;
+        column-gap: 8px;
+    }
+}

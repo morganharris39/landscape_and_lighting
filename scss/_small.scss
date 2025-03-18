@@ -66,6 +66,8 @@ main {
     }
 }// end main
 
+// swiper stuff
+
 .swiper {
     position: relative;
     
@@ -86,6 +88,31 @@ main {
     z-index: 0;
   }
 
+// testimonials
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    div {
+        padding: 7px;
+
+        img {
+            width: 100%;
+            height: auto;
+            clip-path: circle(50% at 50% 50%);
+            transition: transform 1s;
+
+            &:hover {
+                transform: rotate(10deg);
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
