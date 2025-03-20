@@ -1,3 +1,7 @@
+// inject year in footer
+const rightNow = new Date();
+document.querySelector('#year').textContent = rightNow.getFullYear()
+
 const navElement = document.querySelector('#theNav')
 const btnElement = document.querySelector('#theBtn')
 

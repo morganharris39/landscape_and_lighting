@@ -19,36 +19,37 @@ body {
     min-width: 320px;
 }
 
+.paytone-one-regular {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.montserrat-400 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+// #headerWrapper {border-bottom: 1px solid $greyColor;}
 header {
     display: grid;
-    grid-template-columns: 50px auto 44px;
+    grid-template-columns: auto 121px;
     column-gap: $gutter;
     align-items: center; //vertically
     padding: .5rem $gutter;
-    span {
-        font-size: 1.6rem;
-        font-weight: $lightWeight;
-        color: $primaryColor;
+    .phoneText {
+        text-decoration: none;
+        cursor: pointer;
+        color: $accentColor;
+        font-size: 1.2rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 } // end header
-
-
-/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* --------------------------- MAIN --------------------------- */
@@ -56,8 +57,8 @@ main {
     h1 {
         padding: 1rem $gutter.5rem $gutter;
         font-size: 1.5rem;
-        color: $secondaryColor;
-        font-weight: $lightWeight
+        color: white;
+        font-weight: $normalWeight
     }
     p {
         padding: .5rem $gutter;
@@ -79,6 +80,10 @@ main {
         bottom: 0;
         z-index: 1;
         pointer-events: none;
+        padding: 1rem 0 0 1rem;
+        margin: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0) 90%);
     }
 }
 
@@ -87,6 +92,40 @@ main {
     height: auto;
     z-index: 0;
   }
+
+// cards
+
+h2 {
+    margin: 3rem $gutter 0 $gutter;
+    color: $accentColor;
+}
+
+.cards {
+    display: grid;
+
+    div {
+        position: relative;
+        background-color: $primaryColor;
+        border-radius: 10px;
+        margin: 1rem $gutter 2rem $gutter;
+        h3{
+            color: white;
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        img:last-child {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
 
 // testimonials
 
@@ -116,14 +155,14 @@ main {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-    background-color: $primaryColor
+    background-color: $primaryColor;
 } // end footer wrapper
 
 footer {
-    font-size: .85rem;
+    font-size: 1rem;
     padding: 1rem $gutter;
-    color: $greyColor;
+    color: white;
     text-align: center;
     line-height: $leading;
-    a {color: $greyColor;}
+    a {color: white;}
 }// end footer

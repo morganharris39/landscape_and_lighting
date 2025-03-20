@@ -4,8 +4,11 @@
     display: none;
 }
 
-#theNav {
+#navWrapper {
     background-color: $accentColor;
+}
+
+#theNav {
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -54,6 +57,13 @@
     li:hover ul {
         left: auto;
     }
+}
+
+// cards
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 // testimonials

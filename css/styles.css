@@ -319,32 +319,43 @@ body {
   min-width: 320px;
 }
 
-/* --------------------------- HEADER --------------------------- */
-#headerWrapper {
-  border-bottom: 1px solid #ccc;
+.paytone-one-regular {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --------------------------- HEADER --------------------------- */
 header {
   display: grid;
-  grid-template-columns: 50px auto 44px;
+  grid-template-columns: auto 121px;
   -moz-column-gap: 10px;
        column-gap: 10px;
   align-items: center;
   padding: 0.5rem 10px;
 }
-header span {
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: #1d295f;
+header .phoneText {
+  text-decoration: none;
+  cursor: pointer;
+  color: #043003;
+  font-size: 1.2rem;
+}
+header .phoneText:hover {
+  text-decoration: underline;
 }
 
-/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 /* --------------------------- MAIN --------------------------- */
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: #7c1d47;
-  font-weight: 300;
+  color: white;
+  font-weight: 500;
 }
 main p {
   padding: 0.5rem 10px;
@@ -363,12 +374,45 @@ main p {
   bottom: 0;
   z-index: 1;
   pointer-events: none;
+  padding: 1rem 0 0 1rem;
+  margin: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 20%, rgba(0, 0, 0, 0) 90%);
 }
 
 .swiper, .swiper img {
   width: 100%;
   height: auto;
   z-index: 0;
+}
+
+h2 {
+  margin: 3rem 10px 0 10px;
+  color: #043003;
+}
+
+.cards {
+  display: grid;
+}
+.cards div {
+  position: relative;
+  background-color: #854117;
+  border-radius: 10px;
+  margin: 1rem 10px 2rem 10px;
+}
+.cards div h3 {
+  color: white;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.cards div img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cards div img:last-child {
+  position: absolute;
+  bottom: 0;
 }
 
 .testimonials {
@@ -394,30 +438,34 @@ main p {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #1d295f;
+  background-color: #854117;
 }
 
 footer {
-  font-size: 0.85rem;
+  font-size: 1rem;
   padding: 1rem 10px;
-  color: #ccc;
+  color: white;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #ccc;
+  color: white;
 }
 
 @media only screen and (max-width: 34.9375rem) {
   /* NAVIGATION BUTTON */
+  .btnParent {
+    background-color: #043003;
+  }
   #theBtn {
     border: none;
     background: none;
     font-size: 2rem;
-    color: #555;
+    color: white;
     width: 44px;
     height: 44px;
     cursor: pointer;
+    margin: 0.5rem 0;
   }
   #theBtn::before {
     content: "☰";
@@ -428,7 +476,7 @@ footer a {
   }
   /* NAVIGATION BAR */
   #theNav {
-    background-color: #3990c3;
+    background-color: #043003;
     height: 0;
     overflow: hidden;
     list-style-type: none;
@@ -444,7 +492,7 @@ footer a {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
   #theNav li.active a {
-    background-color: #7c1d47;
+    background-color: #1B651A;
   }
   #theNav li a:hover {
     background-color: rgba(0, 0, 0, 0.3);
@@ -462,7 +510,7 @@ footer a {
   .subParent ul {
     list-style-type: none;
     padding: 0;
-    background-color: #1d295f;
+    background-color: #854117;
     display: none;
   }
   .subParent:hover ul {
@@ -474,8 +522,10 @@ footer a {
   #theBtn {
     display: none;
   }
+  #navWrapper {
+    background-color: #043003;
+  }
   #theNav {
-    background-color: #3990c3;
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -499,10 +549,10 @@ footer a {
     color: rgba(255, 255, 255, 0.5);
   }
   #theNav li.active a {
-    background-color: #7c1d47;
+    background-color: #1B651A;
   }
   #theNav li ul {
-    background-color: #1d295f;
+    background-color: #854117;
     list-style-type: none;
     padding: 0;
     position: absolute;
@@ -514,6 +564,10 @@ footer a {
   }
   #theNav li:hover ul {
     left: auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .testimonials div {
     display: grid;
@@ -530,6 +584,10 @@ footer a {
   header, nav, main {
     max-width: 960px;
     margin: auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .testimonials div {
     grid-template-columns: 200px auto;

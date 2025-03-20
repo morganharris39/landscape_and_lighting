@@ -3,6 +3,16 @@ header, nav, main {
     margin: auto;
 }
 
+// cards 
+
+// cards
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
 // testimonials
 
 .testimonials {

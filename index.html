@@ -12,24 +12,26 @@
 <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Paytone+One&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 <div id="headerWrapper">
 	<header>
-        <img src="images/logo1x.png" alt="logo">
-		<span>Design Thinking</span>
-        <button id="theBtn"></button>
+        <img src="images/logo-1x.png" alt="logo" width="100" height="100" srcset="images/logo-1x.png 1x, images/logo-2x.png 2x, images/logo-3x.png 3x">
+        <a href="tel:801-555-4823" class="phoneText">801-555-4823</a>
 	</header>
+    <div class="btnParent">
+        <button id="theBtn"></button>
+    </div>
 </div><!-- end header wrapper -->
 
     
     
 <div id="navWrapper">
     <nav>
-        <ul id="theNav">
+        <ul id="theNav" class="montserrat-400">
             <li><a href="#">Clients</a></li>
             <li class="subParent"><a href="#">Services</a>
                 <ul>
@@ -87,11 +89,40 @@
             <div class="swiper-pagination"></div>
 
             <!-- hero title -->
-            <h1>title goes here</h1>
+            <h1 class="paytone-one-regular">Elevate Your Everyday with Lush Living</h1>
+        </div>
+
+        <h2 class="paytone-one-regular">Services</h2>
+
+        <!-- cards -->
+        <div class="cards">
+            <div>
+                <h3 class="paytone-one-regular">Lawn Mowing</h3>
+                <img src="images/mowing-card.webp" alt="man trimming edges of lawn" width="400" height="400">
+                <img src="images/grass-mask.png" alt="grass mask" width="400" height="227">
+            </div>
+
+            <div>
+                <h3 class="paytone-one-regular">Landscaping</h3>
+                <img src="images/machine-card.webp" alt="large landscaping vehicle" width="400" height="400">
+                <img src="images/wave-mask.png" alt="grass mask" width="400" height="227">
+            </div>
+
+            <div>
+                <h3 class="paytone-one-regular">Gardening</h3>
+                <img src="images/gardening-card.webp" alt="woman sitting and gardening" width="400" height="400">
+                <img src="images/grass-mask.png" alt="grass mask" width="400" height="227">
+            </div>
+
+            <div>
+                <h3 class="paytone-one-regular">Tree Trimming</h3>
+                <img src="images/tree-card.webp" alt="large trees being trimmed" width="400" height="400">
+                <img src="images/wave-mask.png" alt="grass mask" width="400" height="227">
+            </div>
         </div>
 
         <!-- testimonial -->
-        <div class="testimonials">
+        <div class="testimonials montserrat-400">
             <div>
                 <img src="images/customer-1.png" alt="man looking to the left" width="400" height="400">
                 <p>This company does exactly what I want them to do with the landscaping around my home. They have gone above and beyond, making my landscape more beautiful than I ever imagined. The whole team is fantastic to work with—responsive and professional. I would definitely recommend them to others!
@@ -106,8 +137,7 @@
     
 <div id="footerWrapper">
     <footer>
-        <p>Copyright &copy; 2025 Design Thinking Inc. All rights reserved. 
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+        <p class="montserrat-400">&copy; <span id="year">x</span> &bull; Morgan Harris</p>
     </footer>
 </div> <!-- end footer wrapper -->
 
